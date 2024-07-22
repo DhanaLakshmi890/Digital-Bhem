@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Booking Form</title>
+<link rel="stylesheet" href="digital.css">
+<script defer src="digital.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hotel Booking Form</h1>
+        <form id="bookingForm">
+            <h2>Customer Info</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin" required><br>
+            <label for="totalDays">Total Days:</label>
+            <input type="number" id="totalDays" name="totalDays" required><br>
+            <label for="totalPersons">Total Persons:</label>
+            <input type="number" id="totalPersons" name="totalPersons" required><br>
+            <label for="advanceAmount">Advance Amount:</label>
+            <input type="number" id="advanceAmount" name="advanceAmount" required><br>
+
+            <h2>Room Info</h2>
+            <label for="roomType">Room Type:</label>
+            <select id="roomType" name="roomType" required>
+                <option value="delux">Delux</option>
+                <option value="suite">Suite</option>
+            </select><br>
+            <label>Amenities:</label>
+            <input type="checkbox" id="ac" name="amenities" value="ac"> AC
+            <input type="checkbox" id="locker" name="amenities" value="locker"> Locker<br>
+
+            <h2>Cost and Payment</h2>
+            <label for="totalCost">Total Cost:</label>
+            <input type="number" id="totalCost" name="totalCost" readonly><br>
+            <label for="balance">Balance:</label>
+            <input type="number" id="balance" name="balance" readonly><br>
+
+            <button type="button" onclick="calculateCost()">Calculate</button>
+        </form>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
